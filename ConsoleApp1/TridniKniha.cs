@@ -23,14 +23,15 @@ namespace AgregaceAKompozice
 
     public void VypisDochazku(Student s)
     {
-        if(s == null) throw new ArgumentException(nameof(s));
+        if(s == null) throw new ArgumentNullException(nameof(s));
 
         if(!_dochazka.ContainsKey(s) || _dochazka[s].Count == 0)
             {
                 Console.WriteLine("Žádné záznamy");
                 return;
             }
-
+            Console.WriteLine($"Docházka pro {s}:");
+            
             foreach(var zaznam in _dochazka[s])
             {
                 Console.WriteLine(zaznam);

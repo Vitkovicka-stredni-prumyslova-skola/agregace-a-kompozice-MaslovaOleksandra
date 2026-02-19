@@ -20,10 +20,7 @@ namespace AgregaceAKompozice
         Rocnik = rocnik;
     }
 
-    public override string ToString() 
-    {
-        // TODO
-        return "";
-    }
+    public override string ToString() => $"{Prijmeni} {Jmeno} {Rocnik}. ročník";
+    
 }
 }
